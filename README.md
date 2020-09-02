@@ -11,9 +11,9 @@ Here component in this project:
 ## Prerequisites
 See Makefile for:
 
-*Generate file pb
-*Create topic
-*Up and stop Kafka
+* Generate file pb
+* Create topic
+* Up and stop Kafka
 
 ## Running App
 ### Run Anouncement service
