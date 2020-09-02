@@ -1,5 +1,5 @@
 gen_pb:
-	protoc commons/protocs/Numbers.proto --go_out=plugins=grpc:. 
+	protoc commons/protocs/Anouncement.proto --go_out=plugins=grpc:. 
 
 start_anouncement:
 	go run services/anouncement/*.go
