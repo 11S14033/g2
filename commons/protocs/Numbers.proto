@@ -1,0 +1,41 @@
+syntax="proto3";
+
+package protocs;
+
+option go_package="commons/pb";
+
+message Anountcement{
+    string title=1;
+    string message=2;
+    string author=3;
+    string type=4;
+}
+
+message PublishAnouncementReq{
+    Anountcement anountcement=1;
+}
+
+message PublishAnouncementRes{
+    string status=1;
+}
+
+
+message GetAnouncementsReq{
+
+}
+message GetAnouncementsRes{
+    Anountcement anountcement=1;
+}
+
+message ConsumeAndSaveReq{
+
+}
+message ConsumeAndSaveRes{
+    string status=1;
+}
+
+service AnouncementServices{
+    rpc PublishAnouncement(PublishAnouncementReq) returns (PublishAnouncementRes){};
+    rpc GetAnouncements(GetAnouncementsReq) returns (stream GetAnouncementsRes){};
+    rpc ConsumeAndSave(ConsumeAndSaveReq) returns (stream ConsumeAndSaveRes){}; 
+}
